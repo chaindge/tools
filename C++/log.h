@@ -64,7 +64,7 @@ class logger
 	using logger_proxy = std::function<void(int _level, const std::string& _tag, const std::string& _str) >;
 	static void log_sunk(int _level, const std::string& _tag, const std::string& _str) 
 	{
-		std::cout << "@" << _level << "@" << _tag << "@" << _str << std::endl;
+		std::cout << "@" << _level << "@" << _tag << "@" << _str;
 	}
 
 private:
