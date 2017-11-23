@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{20434fdd-80f4-41d2-a34f-e20be7a2065d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json">
+      <UniqueIdentifier>{d2443089-bef6-4ac2-af34-06e51dd23ea0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\error">
+      <UniqueIdentifier>{d4fc8b83-2a8c-4f94-9035-e4163648707b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\internal">
+      <UniqueIdentifier>{4cfde0a8-5e53-444f-bfc1-776d4598fbb6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="json\msinttypes">
+      <UniqueIdentifier>{5f50aa89-eef6-404f-8d8b-03b639aa5a16}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rapidxml">
+      <UniqueIdentifier>{312ee916-ace4-43eb-a6bf-473078aa6331}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\type_checker.h">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\exp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\test_case.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\jsonut.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\json\allocators.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\document.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\document-wrapper.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\encodedstream.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\encodings.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\filereadstream.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\filewritestream.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\fwd.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\istreamwrapper.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\memorybuffer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\memorystream.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\ostreamwrapper.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\pointer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\prettywriter.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\rapidjson.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\reader.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\schema.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\stream.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\stringbuffer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\writer.h">
+      <Filter>json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\error\en.h">
+      <Filter>json\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\error\error.h">
+      <Filter>json\error</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\biginteger.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\diyfp.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\dtoa.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\ieee754.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\itoa.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\meta.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\pow10.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\regex.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\stack.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\strfunc.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\strtod.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\internal\swap.h">
+      <Filter>json\internal</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\msinttypes\inttypes.h">
+      <Filter>json\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\json\msinttypes\stdint.h">
+      <Filter>json\msinttypes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rapidxml\rapidxml.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rapidxml\rapidxml_iterators.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rapidxml\rapidxml_print.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\rapidxml\rapidxml_utils.hpp">
+      <Filter>rapidxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\test_case.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\jsonut.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
