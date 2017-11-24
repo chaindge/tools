@@ -71,8 +71,10 @@ void o_json(json_coder* coder, jsutValue& json, /*const*/ ty& t)
 
 	char addr[24] = { 0 };
 	sprintf_s(addr, "0x%p", &t);
-	coder->add_member(json, "%p", addr);
+	coder->add_member(json, "%p", &t);
 
+	char* p = "char*";
+	coder->add_member(json, "char*", p);
 }
 
 

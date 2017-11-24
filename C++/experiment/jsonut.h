@@ -16,41 +16,6 @@ typedef rapidjson::Writer<jsutStringBuffer>	jsutWriter;
 typedef rapidjson::PrettyWriter<jsutStringBuffer> jsutWriterX;
 typedef rapidjson::MemoryPoolAllocator<> jsutAllocator;
 
-template <class T> 
-struct get_type {
-	typedef T type; 
-};
-
-template <class T> 
-struct get_type<T*> {
-	typedef T type; 
-};
-
-template <class T> 
-struct get_type<T&> { 
-	typedef T type; 
-};
-
-template <class T> 
-struct get_type<const T> { 
-	typedef T type;
-};
-
-template <class T> 
-struct get_type<const T*> {
-	typedef T type; 
-};
-
-template <class T> 
-struct get_type<const T&> {
-	typedef T type;
-};
-
-template <class T> 
-struct get_type<T* const> { 
-	typedef T type; 
-};
-
 
 /**
  *	util class for read from json file or write json to file
@@ -180,7 +145,7 @@ public:
 	/**
 	*	push back wrapers
 	*/
-	template <class ValueType/*, int dump = 0*/>
+	template <class ValueType>
 	bool push_back(jsutValue& json, ValueType value)
 	{
 		assert(json.IsArray());
@@ -194,6 +159,7 @@ public:
 		return true;
 	}
 
+	//template <>
 	inline bool push_back(jsutValue& json, const jsutValue& value)
 	{
 		assert(json.IsArray());
@@ -269,7 +235,7 @@ public:
 
 	template<class T>
 	inline void to_json(jsutValue& json, T value) {
-		typedef typename get_type<T>::type value_type;
+		typedef typename std::remove_cv<T>::type value_type;
 		json_traits<value_type>::to_json(this, json, value);
 	}
 
@@ -286,6 +252,21 @@ struct json_traits {
 	}
 };
 
+//template <class T>
+//struct json_traits<T&> {
+//	static inline void to_json(json_coder* coder, jsutValue& json, T& value) {
+//		json.Set(value);
+//	}
+//};
+
+template <class T>
+struct json_traits<T*> {
+	static inline void to_json(json_coder* coder, jsutValue& json, T* value) {
+		json.SetUint64((uint64_t)value);
+	}
+};
+
+
 template <>
 struct json_traits<std::string> {
 	static inline void to_json(json_coder* coder, jsutValue& json, const std::string& value) {
@@ -294,7 +275,14 @@ struct json_traits<std::string> {
 };
 
 template <>
-struct json_traits<char> {
+struct json_traits<char*> {
+	static inline void to_json(json_coder* coder, jsutValue& json, char* value) {
+		json.SetString(value, coder->alloc());
+	}
+};
+
+template <>
+struct json_traits<const char*> {
 	static inline void to_json(json_coder* coder, jsutValue& json, const char* value) {
 		json.SetString(value, coder->alloc());
 	}
